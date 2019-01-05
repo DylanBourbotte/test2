@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr-F">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bourbotte Dylan - Bievenue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+    <!---Entrée du site-->
+    <div class="wrapper-enter">
+        <h1>Site en prod.</h1>
+    </div>
+    <div class="welcome-section content-hidden">
+        <div class="content-wrap">
+          <ul class="fly-in-text">
+              <li>B</li>
+              <li>I</li>
+              <li>E</li>
+              <li>N</li>
+              <li>V</li>
+              <li>E</li>
+              <li>N</li>
+              <li>U</li>
+              <li>E</li>
+          </ul>
+          <a href="#" class="enter-button">Entrée</a>
+
+        </div>
+    </div>
+<!----Script entrée du site-->
+ <script type="text/javascript">
+    $(function(){
+        var welcomeSection = $('.welcome-section'),
+            enterButton = welcomeSection.find('.enter-button');
+
+            setTimeout(function() {
+                welcomeSection.removeClass('content-hidden');
+            },800);
+
+            enterButton.on('click', function(e){
+                e.preventDefault();
+                welcomeSection.addClass('content-hidden').fadeOut();
+            })
+
+    })
+ </script>
+ <!-----Fin script entrée du site -->
+</body>
+</html>
